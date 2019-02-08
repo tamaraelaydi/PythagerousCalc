@@ -1,0 +1,27 @@
+package pythagorus;
+
+public class PythagorusCalc {
+
+	//custom function
+	public static void hypCalc(double _a, double _b) {
+		double _hyp = Math.sqrt(_a*_a + _b*_b);
+		System.out.println("The hyp of a right-angled triangle with side lengths of "+_a+" and "+_b +" is "+_hyp+".");	
+	}
+	
+	public static void sideCalc(double side, double hyp ) {
+		double otherSide = Math.sqrt(hyp*hyp - side*side);
+		System.out.println("The other side of a right-angled triangle with hypotenuse of "+hyp+" and "+side +" is "+otherSide+".");
+	}
+	
+	public static void main(String[] args) {
+		// declare variables : doubles a, b, hyp
+		double a = 10;
+		double b = 17;
+		
+		hypCalc(a, b);
+		hypCalc(320, 1809);
+		sideCalc(a, b);
+		sideCalc(b, a);
+	}
+
+}
